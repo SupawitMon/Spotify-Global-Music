@@ -212,14 +212,6 @@ def render_hero(metrics):
 
         st.markdown('</div>', unsafe_allow_html=True)
 
-    with right:
-        st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-        st.markdown("### About")
-        st.write("แอปนี้ใช้ Machine Learning ทำนายความนิยมของเพลงจาก metadata ที่สำคัญ")
-        st.write(f"**Best Model:** {metrics.get('best_model', '-')}")
-        st.markdown('</div>', unsafe_allow_html=True)
-
-
 def build_quick_inputs(feature_columns):
     st.markdown('<div class="section-title">⚡ Quick Inputs</div>', unsafe_allow_html=True)
 
