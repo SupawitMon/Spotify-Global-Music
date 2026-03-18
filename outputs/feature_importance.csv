@@ -1,0 +1,373 @@
+feature,importance
+num__artist_popularity,0.15214500887581725
+num__artist_followers_log,0.14296291176014808
+num__artist_followers,0.14292453832459978
+num__duration_min,0.0902309283651091
+num__release_year,0.07989452227136798
+num__album_total_tracks,0.07504507307694323
+num__release_month,0.05541099908685412
+num__track_number,0.05054017665381324
+cat__album_type_album,0.01445122648228675
+num__explicit,0.01352761488461904
+cat__primary_genre_['soundtrack'],0.01170654637677895
+cat__primary_genre_[],0.010907013507460176
+cat__album_type_single,0.010025345330273137
+cat__album_type_compilation,0.007714814869238573
+cat__primary_genre_['grunge',0.006071648630439358
+cat__primary_genre_['latin pop'],0.0038448033377385376
+cat__primary_genre_['soft pop'],0.0035722442583244174
+cat__primary_genre_['reggaeton',0.003521496691245892
+cat__primary_genre_['emo rap',0.003462866314002337
+cat__primary_genre_['rap'],0.003082961137225413
+cat__primary_genre_['pop'],0.0030822756076819427
+cat__primary_genre_['art pop',0.0027205644897333957
+cat__primary_genre_['industrial metal',0.0026435687293039265
+cat__primary_genre_['r&b'],0.002396836761840603
+cat__primary_genre_['k-pop'],0.0023150229817545556
+cat__primary_genre_['lo-fi indie'],0.002209217908979099
+cat__primary_genre_['dream pop'],0.002157789650060793
+cat__primary_genre_['egyptian pop',0.001949638970154973
+cat__primary_genre_['edm'],0.0019418001754049471
+cat__primary_genre_['dark r&b'],0.0018435234261830022
+cat__primary_genre_['folk',0.0017079774199649064
+cat__primary_genre_['bedroom pop'],0.0017059645513722267
+cat__primary_genre_['hip hop',0.0016851517748348848
+cat__primary_genre_['neo-psychedelic'],0.0016534527138063967
+cat__primary_genre_['indie',0.0016129383425322165
+cat__primary_genre_['country',0.0015965885152533434
+cat__primary_genre_['moombahton'],0.001582717200072771
+cat__primary_genre_['folk pop'],0.001567247548654512
+cat__primary_genre_['norwegian pop',0.001500280529837348
+cat__primary_genre_['nu metal',0.0013961986541532695
+cat__primary_genre_['trap'],0.0013899522312966898
+cat__primary_genre_['egyptian hip hop',0.0013860217639874853
+cat__primary_genre_['rock',0.0013855251174438204
+cat__primary_genre_['indie rock'],0.0013496402399516866
+cat__primary_genre_['classic rock',0.0013273487696245315
+cat__primary_genre_['anime',0.0013025467396924632
+cat__primary_genre_['country'],0.0012401498963095245
+cat__primary_genre_['nu metal'],0.001102461872609244
+cat__primary_genre_['rap',0.0010482466667535812
+cat__primary_genre_['britpop',0.0010381045437951478
+cat__primary_genre_['neo-psychedelic',0.0010123438895649518
+cat__primary_genre_['witch house',0.0009661124606950506
+cat__primary_genre_['soft pop',0.0009265386898606472
+cat__primary_genre_['celtic',0.0008766330381606095
+cat__primary_genre_['pop punk',0.0008710516212578208
+cat__primary_genre_['glam metal',0.0008696790024256504
+cat__primary_genre_['anime'],0.0008634212750384048
+cat__primary_genre_['classical',0.0008326016141529212
+cat__primary_genre_['downtempo',0.0008196235175230859
+cat__primary_genre_['rap rock',0.0008183316006505426
+cat__primary_genre_['metal',0.0008139168871786141
+cat__primary_genre_['riot grrrl',0.0008046613392399992
+cat__primary_genre_['jersey club'],0.0008015866288282132
+cat__primary_genre_['southern gothic'],0.0007759735213042567
+cat__primary_genre_['nightcore'],0.0007684286483394562
+cat__primary_genre_['big beat',0.0007647889441112997
+cat__primary_genre_['dark r&b',0.000759192599509402
+cat__primary_genre_['christmas'],0.0007551376191332863
+cat__primary_genre_['melodic rap'],0.000746754755063385
+cat__primary_genre_['tropical house'],0.0007379942955072911
+cat__primary_genre_['alternative rock'],0.000735041933238009
+cat__primary_genre_['slap house'],0.0007200440204725746
+cat__primary_genre_['art pop'],0.0007146055606364836
+cat__primary_genre_['latin'],0.0006686919402620789
+cat__primary_genre_['orchestral',0.0006636277492122358
+cat__primary_genre_['house'],0.0006505761108846653
+cat__primary_genre_['indonesian hip hop'],0.0006450771883714752
+cat__primary_genre_['darkwave',0.0006371137628562881
+cat__primary_genre_['indie'],0.000624271945209036
+cat__primary_genre_['garage rock'],0.0006204598802790279
+cat__primary_genre_['blues rock',0.0006154449334817042
+cat__primary_genre_['edm',0.0006110699446866372
+cat__primary_genre_['emo rap'],0.0006090973025585851
+cat__primary_genre_['medieval',0.00060370684559349
+cat__primary_genre_['japanese classical',0.0005930426482207961
+cat__primary_genre_['synthpop'],0.0005786741166426186
+cat__primary_genre_['future bass'],0.0005533309060955063
+cat__primary_genre_['post-punk',0.0005489416985810946
+cat__primary_genre_['country hip hop',0.0005488336796562545
+cat__primary_genre_['witch house'],0.000538054185305106
+cat__primary_genre_['soundtrack',0.0005229915148269235
+cat__primary_genre_['hyperpop',0.0005217134737378576
+cat__primary_genre_['medieval'],0.0005192218078307333
+cat__primary_genre_['southern hip hop'],0.0005187462895890997
+cat__primary_genre_['red dirt',0.0005161941996588732
+cat__primary_genre_['afro house',0.0005109905571503187
+cat__primary_genre_['german indie',0.0005086540151678445
+cat__primary_genre_['swedish pop'],0.0005049802855982087
+cat__primary_genre_['hypertechno'],0.0005042537585795717
+cat__primary_genre_['proto-punk',0.0004937267749569599
+cat__primary_genre_['post-grunge',0.00048230282254051936
+cat__primary_genre_['trap metal',0.00048215144633552664
+cat__primary_genre_['new wave',0.0004789244866968423
+cat__primary_genre_['east coast hip hop',0.0004785446696270204
+cat__primary_genre_['musicals'],0.00046485581923206843
+cat__primary_genre_['ballroom vogue',0.0004623065250151869
+cat__primary_genre_['soft rock'],0.00046007253256810974
+cat__primary_genre_['heavy metal',0.00045787116041429295
+cat__primary_genre_['pop soul'],0.00045530026499083045
+cat__primary_genre_['east coast hip hop'],0.0004545740122109491
+cat__primary_genre_['glam metal'],0.00044763924869888234
+cat__primary_genre_['alternative rock',0.00044671490602568516
+cat__primary_genre_['art rock',0.0004410349278277477
+cat__primary_genre_['old school hip hop',0.0004373199729607971
+cat__primary_genre_['emo',0.00043083726100733597
+cat__primary_genre_['metal'],0.00041802051317730486
+cat__primary_genre_['pop punk'],0.0004168545642607735
+cat__primary_genre_['funk rock',0.00041617903046138615
+cat__primary_genre_['europop',0.00040527481791175526
+cat__primary_genre_['phonk',0.00040408210729298905
+cat__primary_genre_['melodic rap',0.0004018480271571551
+cat__primary_genre_['r&b',0.0003933921814423633
+cat__primary_genre_['classic country',0.00038243671777653997
+cat__primary_genre_['german hip hop',0.00037683329499816487
+cat__primary_genre_['alternative metal'],0.00037478022758227563
+cat__primary_genre_['alternative r&b',0.00036322587761887564
+cat__primary_genre_['singer-songwriter',0.0003509011815070372
+cat__primary_genre_['electroclash',0.00035041634193430356
+cat__primary_genre_['garage rock',0.0003444108940710589
+cat__primary_genre_['dansk pop'],0.0003392878470668544
+cat__primary_genre_['dubstep',0.00033490347257245757
+cat__primary_genre_['electro house'],0.0003256637597722336
+cat__primary_genre_['classic rock'],0.0003195813865507231
+cat__primary_genre_['bedroom pop',0.0003191788445882098
+cat__primary_genre_['afro house'],0.00031830616940529017
+cat__primary_genre_['progressive rock',0.0003088153706371487
+cat__primary_genre_['rage rap'],0.00030750262113839975
+cat__primary_genre_['neoclassical'],0.0003074902465509027
+cat__primary_genre_['sea shanties',0.00029187244127173415
+cat__primary_genre_['french pop'],0.0002884038729527312
+cat__primary_genre_['aor',0.00028627091823302893
+cat__primary_genre_['southern gothic',0.00025374456276242377
+cat__primary_genre_['stutter house'],0.00025013197693939874
+cat__primary_genre_['synthwave',0.00024541927790199273
+cat__primary_genre_['post-grunge'],0.00024477596704510217
+cat__primary_genre_['motown',0.00024254238787690198
+cat__primary_genre_['french indie pop'],0.00023532740877214842
+cat__primary_genre_['phonk'],0.00023460152824320067
+cat__primary_genre_['punk',0.0002330127167447178
+cat__primary_genre_['mahraganat',0.00023257777787740936
+cat__primary_genre_['singer-songwriter'],0.0002325546411236699
+cat__primary_genre_['exotica',0.00023233169394463172
+cat__primary_genre_['acid house'],0.00022470699700147072
+cat__primary_genre_['noise rock',0.00022068376895501723
+cat__primary_genre_['brooklyn drill',0.00022035130860892027
+cat__primary_genre_['arabic hip hop',0.00021977862318552644
+cat__primary_genre_['baroque pop'],0.00021648516034923973
+cat__primary_genre_['afrobeats',0.00021509423784483498
+cat__primary_genre_['jazz rap',0.0002104116248166223
+cat__primary_genre_['dub'],0.00021015371282874216
+cat__primary_genre_['europop'],0.00020531914777213177
+cat__primary_genre_['uk drill',0.00020423972519985147
+cat__primary_genre_['orchestral'],0.00019789951782436685
+cat__primary_genre_['brazilian bass',0.00019781170408566826
+cat__primary_genre_['arabic hip hop'],0.00019758038617329247
+cat__primary_genre_['french house',0.00019719300921303595
+cat__primary_genre_['synthwave'],0.0001901166414457784
+cat__primary_genre_['southern hip hop',0.00018619568038625968
+cat__primary_genre_['lo-fi',0.00018573822516821314
+cat__primary_genre_['corrido',0.0001853605932989276
+cat__primary_genre_['indonesian r&b'],0.00018121773917270333
+cat__primary_genre_['jazz',0.00017757297204327037
+cat__primary_genre_['grime',0.00017374402924282613
+cat__primary_genre_['argentine trap',0.00017200005629004682
+cat__primary_genre_['breakcore'],0.00016981983508201516
+cat__primary_genre_['yacht rock',0.00016724492900115187
+cat__primary_genre_['alté'],0.0001588210179492469
+cat__primary_genre_['afrobeats'],0.00015626436924683803
+cat__primary_genre_['bolero',0.00015538114242483653
+cat__primary_genre_['drum and bass'],0.0001488295626250703
+cat__primary_genre_['synthpop',0.00014735774346884704
+cat__primary_genre_['egyptian pop'],0.0001449800762559307
+cat__primary_genre_['latin house',0.00014089284868682187
+cat__primary_genre_['psychedelic rock',0.0001397608280628624
+cat__primary_genre_['dancehall'],0.00013901103377716634
+cat__primary_genre_['brazilian funk',0.00013645062335026844
+cat__primary_genre_['uk garage'],0.0001360465828300264
+cat__primary_genre_['alternative r&b'],0.0001332442681644465
+cat__primary_genre_['edm trap'],0.00013293113304588562
+cat__primary_genre_['pop rock'],0.00013042580637162427
+cat__primary_genre_['jam band',0.00012840055086747807
+cat__primary_genre_['shoegaze',0.00011849932726478655
+cat__primary_genre_['reggae',0.00011753731677706086
+cat__primary_genre_['trap soul'],0.00011737671001113692
+cat__primary_genre_['corridos tumbados',0.00011676667030323823
+cat__primary_genre_['gangster rap',0.00011670366815739745
+cat__primary_genre_['new jack swing'],0.0001137852235203617
+cat__primary_genre_['hypertechno',0.0001105892560194263
+cat__primary_genre_['hard techno'],0.00011030782650181143
+cat__primary_genre_['slap house',0.00010973639746509981
+cat__primary_genre_['slowcore'],0.00010606575226730438
+cat__primary_genre_['french house'],0.00010594832337703448
+cat__primary_genre_['rock'],0.00010536498861038248
+cat__primary_genre_['dream pop',0.00010245206568392862
+cat__primary_genre_['dance pop'],0.00010196098445140109
+cat__primary_genre_unknown,9.597985678822347e-05
+cat__primary_genre_['west coast hip hop',9.583754064090551e-05
+cat__primary_genre_['future bass',9.390209509460401e-05
+cat__primary_genre_['folk rock'],9.174555976325139e-05
+cat__primary_genre_['doo-wop'],9.080931741511588e-05
+cat__primary_genre_['honky tonk',8.995613505856153e-05
+cat__primary_genre_['west coast hip hop'],8.994903293785846e-05
+cat__primary_genre_['trance'],8.757223854130582e-05
+cat__primary_genre_['trip hop',8.577871148887639e-05
+cat__primary_genre_['surf rock'],8.263795643689972e-05
+cat__primary_genre_['reggaeton chileno'],8.182350703855733e-05
+cat__primary_genre_['hyperpop'],8.179541058230843e-05
+cat__primary_genre_['slowcore',8.127713057633188e-05
+cat__primary_genre_['shibuya-kei'],7.94170597865095e-05
+cat__primary_genre_['hard rock',7.747534055319797e-05
+cat__primary_genre_['german hip hop'],7.67771872620639e-05
+cat__primary_genre_['alté',7.517421147143606e-05
+cat__primary_genre_['eurodance',7.47414138315444e-05
+cat__primary_genre_['minimalism',7.462042948897412e-05
+cat__primary_genre_['italo dance'],7.45046592426724e-05
+cat__primary_genre_['soul',7.375866209560147e-05
+cat__primary_genre_['chicago drill',7.356601927224315e-05
+cat__primary_genre_['britpop'],7.226208796502094e-05
+cat__primary_genre_['classical'],7.173888583771921e-05
+cat__primary_genre_['house',6.889163185002306e-05
+cat__primary_genre_['reggaeton mexa',6.836723765081117e-05
+cat__primary_genre_['drum and bass',6.819191577409104e-05
+cat__primary_genre_['norwegian pop'],6.738165375305226e-05
+cat__primary_genre_['celtic'],6.64091489070859e-05
+cat__primary_genre_['brazilian pop',6.523216998487921e-05
+cat__primary_genre_['finnish rock'],6.488152893928849e-05
+cat__primary_genre_['indonesian indie',6.104947732710576e-05
+cat__primary_genre_['latin alternative'],5.835998186681298e-05
+cat__primary_genre_['reggaeton'],5.765405781613271e-05
+cat__primary_genre_['reggae'],5.75614860975506e-05
+cat__primary_genre_['drumstep'],5.746718263722808e-05
+cat__primary_genre_['outlaw country',5.731090810159841e-05
+"cat__primary_genre_[""children's music""]",5.680017895650741e-05
+cat__primary_genre_['glam rock',5.6663738824645536e-05
+cat__primary_genre_['ambient folk'],5.658953437163111e-05
+cat__primary_genre_['sexy drill'],5.6536785823230254e-05
+cat__primary_genre_['latin pop',5.641523747021457e-05
+cat__primary_genre_['trap soul',5.488114378772499e-05
+cat__primary_genre_['folk rock',5.381698618118243e-05
+cat__primary_genre_['melodic bass',5.1989130703779126e-05
+cat__primary_genre_['gospel',5.1872747303467406e-05
+cat__primary_genre_['emo'],4.99146066175076e-05
+cat__primary_genre_['christian',4.8274509656444806e-05
+cat__primary_genre_['malayalam hip hop',4.804557681027457e-05
+cat__primary_genre_['bluegrass',4.7691138229506164e-05
+cat__primary_genre_['alternative metal',4.7322495038840214e-05
+cat__primary_genre_['dancehall',4.671507139973405e-05
+cat__primary_genre_['crunk',4.610297954983464e-05
+cat__primary_genre_['french pop',4.603877287664974e-05
+cat__primary_genre_['french r&b',4.57198680149522e-05
+cat__primary_genre_['c-pop'],4.492108505578627e-05
+cat__primary_genre_['funk de bh',4.476019620308862e-05
+cat__primary_genre_['dembow'],4.339850713789878e-05
+cat__primary_genre_['anti-folk'],4.322256168386045e-05
+cat__primary_genre_['cumbia norteña',4.204646173502259e-05
+cat__primary_genre_['big room',4.085282229165222e-05
+cat__primary_genre_['neo soul'],4.049525540384573e-05
+cat__primary_genre_['arrocha'],4.037039803277892e-05
+cat__primary_genre_['eurodance'],3.84982526934673e-05
+cat__primary_genre_['disco'],3.8412934771910374e-05
+cat__primary_genre_['quiet storm',3.8349855557444384e-05
+cat__primary_genre_['deep house'],3.816561848854497e-05
+cat__primary_genre_['melbourne bounce',3.7699327274181814e-05
+cat__primary_genre_['stoner rock',3.740205641993994e-05
+cat__primary_genre_['amapiano',3.7280200963156146e-05
+cat__primary_genre_['surf rock',3.722002803270544e-05
+cat__primary_genre_['future house'],3.628623526467065e-05
+cat__primary_genre_['latin hip hop',3.5734668694799254e-05
+cat__primary_genre_['christian hip hop'],3.56748901327174e-05
+cat__primary_genre_['drone',3.47763791991791e-05
+cat__primary_genre_['quiet storm'],3.2907720500232686e-05
+cat__primary_genre_['christmas',3.241750399561823e-05
+cat__primary_genre_['sea shanties'],3.2357158204512305e-05
+cat__primary_genre_['hipdut'],3.131062827167962e-05
+cat__primary_genre_['rockabilly',3.060065348889311e-05
+cat__primary_genre_['agronejo'],2.8402263268573256e-05
+cat__primary_genre_['texas country',2.8385949077818688e-05
+cat__primary_genre_['classic soul'],2.821311420974381e-05
+cat__primary_genre_['glam rock'],2.6760060574140614e-05
+cat__primary_genre_['funkot',2.6424929557097657e-05
+cat__primary_genre_['lounge'],2.603082887643124e-05
+cat__primary_genre_['funk rock'],2.574955547388072e-05
+cat__primary_genre_['jangle pop',2.5710995434710415e-05
+cat__primary_genre_['melodic bass'],2.53778448403848e-05
+cat__primary_genre_['christian folk'],2.5088046855996247e-05
+cat__primary_genre_['metalcore',2.4970771501380237e-05
+cat__primary_genre_['german pop',2.4431219135370867e-05
+cat__primary_genre_['g-funk',2.362874785802455e-05
+cat__primary_genre_['japanese vgm',2.329147346371069e-05
+cat__primary_genre_['power pop',2.2953039070961963e-05
+cat__primary_genre_['southern rock',2.2331108548113396e-05
+cat__primary_genre_['avant-garde'],2.2258802526366385e-05
+cat__primary_genre_['blues',2.1531535575227858e-05
+cat__primary_genre_['stutter house',2.104436229884782e-05
+cat__primary_genre_['trance',2.0955176595779444e-05
+cat__primary_genre_['new age',1.9689993299873147e-05
+cat__primary_genre_['christian rock'],1.9637162700898864e-05
+cat__primary_genre_['old school hip hop'],1.9627466506797883e-05
+cat__primary_genre_['gnawa'],1.9037963034554077e-05
+cat__primary_genre_['ambient',1.759756818636646e-05
+cat__primary_genre_['trap metal'],1.7434014923667573e-05
+cat__primary_genre_['electro swing',1.7025683545988065e-05
+cat__primary_genre_['post-rock'],1.672121735812697e-05
+cat__primary_genre_['hard techno',1.6421952555891865e-05
+cat__primary_genre_['colombian pop',1.5962470801941466e-05
+cat__primary_genre_['breakcore',1.5037821520076081e-05
+cat__primary_genre_['disco',1.4898482269139209e-05
+cat__primary_genre_['happy hardcore',1.4859747653344764e-05
+cat__primary_genre_['japanese vgm'],1.4743491160070737e-05
+cat__primary_genre_['acid techno',1.4404453225766116e-05
+cat__primary_genre_['mpb',1.4359501260676795e-05
+cat__primary_genre_['grime'],1.4283502210501091e-05
+cat__primary_genre_['rally house'],1.4222607657054207e-05
+cat__primary_genre_['vietnamese hip hop',1.3891779271749077e-05
+cat__primary_genre_['yacht rock'],1.369412610022849e-05
+cat__primary_genre_['kayokyoku',1.3367764834171214e-05
+cat__primary_genre_['cloud rap',1.291142681507674e-05
+cat__primary_genre_['lo-fi hip hop',1.2661290126242676e-05
+cat__primary_genre_['neoclassical',1.2339522153049453e-05
+cat__primary_genre_['uk grime'],1.210903105156051e-05
+cat__primary_genre_['folk metal'],1.170786797302541e-05
+cat__primary_genre_['nigerian drill',1.1144227788930486e-05
+cat__primary_genre_['tech house'],1.1020407315720028e-05
+cat__primary_genre_['organic house'],1.0715529506331437e-05
+cat__primary_genre_['pop soul',1.0401543582361707e-05
+cat__primary_genre_['comedy'],9.715533006068428e-06
+cat__primary_genre_['chicago drill'],9.644949982080918e-06
+cat__primary_genre_['psytrance',9.594183963333018e-06
+cat__primary_genre_['trip hop'],9.330915456003157e-06
+cat__primary_genre_['musicals',8.97191794805512e-06
+cat__primary_genre_['groove metal',8.931242606614505e-06
+cat__primary_genre_['christian hip hop',8.87724327906221e-06
+cat__primary_genre_['techengue',8.868900963203972e-06
+cat__primary_genre_['industrial rock',8.825588400106998e-06
+cat__primary_genre_['bachata',8.79548382567132e-06
+cat__primary_genre_['classic soul',8.691351671393182e-06
+cat__primary_genre_['native american music',8.645373271787063e-06
+cat__primary_genre_['nu disco',8.545132877186178e-06
+cat__primary_genre_['exotica'],8.33078994972283e-06
+cat__primary_genre_['ebm',8.222092521493925e-06
+cat__primary_genre_['worship',7.778233321663528e-06
+cat__primary_genre_['dansk rap',7.737617779242888e-06
+cat__primary_genre_['progressive metal',7.387152061637265e-06
+cat__primary_genre_['indie rock',7.323635725278876e-06
+cat__primary_genre_['japanese classical'],7.267912837120713e-06
+cat__primary_genre_['j-pop',7.155701396931566e-06
+cat__primary_genre_['future house',7.121694464669416e-06
+cat__primary_genre_['indie r&b'],6.7683768505870065e-06
+cat__primary_genre_['alt country',6.636036240215364e-06
+cat__primary_genre_['soul jazz',6.338222756528953e-06
+cat__primary_genre_['gangster rap'],6.265187461803456e-06
+cat__primary_genre_['jazz rap'],5.978925956369781e-06
+cat__primary_genre_['moroccan pop'],5.697235839881372e-06
+cat__primary_genre_['azonto',5.68271587390386e-06
+cat__primary_genre_['blues rock'],5.620942667718783e-06
+cat__primary_genre_['afrobeat'],5.4181156199982375e-06
+cat__primary_genre_['folk metal',5.394735767058243e-06
+cat__primary_genre_['bongo flava'],4.862145825047491e-06
+cat__primary_genre_['big room'],4.509836867223215e-06
+cat__primary_genre_['indie soul'],4.104096163324114e-06
+cat__primary_genre_['3 step',3.899427090053353e-06
+cat__primary_genre_['melbourne bounce'],3.7217295348188683e-06
