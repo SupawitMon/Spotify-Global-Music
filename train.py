@@ -13,6 +13,8 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.linear_model import LinearRegression
+from sklearn import set_config
+set_config(transform_output="pandas")
 
 warnings.filterwarnings("ignore")
 
@@ -191,7 +193,7 @@ def build_preprocessor(X: pd.DataFrame):
 
     categorical_transformer = Pipeline(steps=[
         ("imputer", SimpleImputer(strategy="most_frequent")),
-        ("onehot", OneHotEncoder(handle_unknown="ignore"))
+        ("onehot", OneHotEncoder(handle_unknown="ignore", sparse_output=False))
     ])
 
     preprocessor = ColumnTransformer(
@@ -225,18 +227,27 @@ def evaluate_model(name, model, X_train, X_test, y_train, y_test):
 def save_feature_importance(best_model, X: pd.DataFrame):
     try:
         model = best_model.named_steps["model"]
-        preprocessor = best_model.named_steps["preprocessor"]
 
-        feature_names = preprocessor.get_feature_names_out()
+        
+        if not hasattr(model, "feature_importances_"):
+            return pd.DataFrame(columns=["feature", "importance"])
+
         importances = model.feature_importances_
 
+        
+        features = X.columns.tolist()
+
+        
+        min_len = min(len(features), len(importances))
+
         fi = pd.DataFrame({
-            "feature": feature_names,
-            "importance": importances
+            "feature": features[:min_len],
+            "importance": importances[:min_len]
         }).sort_values("importance", ascending=False)
 
         fi.to_csv(os.path.join(OUTPUT_DIR, "feature_importance.csv"), index=False)
         return fi
+
     except Exception:
         return pd.DataFrame(columns=["feature", "importance"])
 
@@ -318,18 +329,18 @@ def main():
     ])
 
     rf_param_dist = {
-        "model__n_estimators": [150, 200, 250, 300],
-        "model__max_depth": [None, 8, 12, 16, 20],
-        "model__min_samples_split": [2, 5, 10],
-        "model__min_samples_leaf": [1, 2, 4],
-        "model__max_features": ["sqrt", "log2", None]
+        "model__n_estimators": [100, 150],
+        "model__max_depth": [None, 10],
+        "model__min_samples_split": [2, 5],
+        "model__min_samples_leaf": [1, 2],
+        "model__max_features": ["sqrt"]
     }
 
     print("\n=== RandomizedSearchCV on RandomForest ===")
     rf_search = RandomizedSearchCV(
         estimator=rf_pipeline,
         param_distributions=rf_param_dist,
-        n_iter=12,
+        n_iter=5,
         cv=cv,
         scoring="neg_root_mean_squared_error",
         n_jobs=-1,
@@ -355,7 +366,7 @@ def main():
     gb_search = RandomizedSearchCV(
         estimator=gb_pipeline,
         param_distributions=gb_param_dist,
-        n_iter=10,
+        n_iter=5,
         cv=cv,
         scoring="neg_root_mean_squared_error",
         n_jobs=-1,
