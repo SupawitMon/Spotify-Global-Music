@@ -25,15 +25,6 @@ METRICS_PATH = os.path.join(MODEL_DIR, "metrics.json")
 FI_PATH = os.path.join(OUTPUT_DIR, "feature_importance.csv")
 LOGO_PATH = os.path.join(ASSETS_DIR, "spotify_logo.png")
 
-# -------------------------
-# HUGGING FACE URLS
-# IMPORTANT: repo must be PUBLIC
-# -------------------------
-HF_MODEL_URL = "https://huggingface.co/Mon2948/spotify_model/resolve/main/best_model.pkl?download=true"
-HF_FEATURE_URL = "https://huggingface.co/Mon2948/spotify_model/resolve/main/feature_columns.pkl?download=true"
-HF_METRICS_URL = "https://huggingface.co/Mon2948/spotify_model/resolve/main/metrics.json?download=true"
-HF_FI_URL = "https://huggingface.co/Mon2948/spotify_model/resolve/main/feature_importance.csv?download=true"
-
 
 # -------------------------
 # DOWNLOAD / LOAD
