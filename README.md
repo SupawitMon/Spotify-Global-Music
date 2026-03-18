@@ -1,4 +1,6 @@
 # Spotify Hit Predictor Pro
+## Project Overview
+This project predicts Spotify track popularity using machine learning.
 
 A Machine Learning deployment project that predicts **song popularity (0–100)** from Spotify-style audio features.
 
