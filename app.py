@@ -1,7 +1,6 @@
 import os
 import json
 import joblib
-import urllib.request
 import numpy as np
 import pandas as pd
 import streamlit as st
@@ -27,34 +26,10 @@ LOGO_PATH = os.path.join(ASSETS_DIR, "spotify_logo.png")
 
 
 # -------------------------
-# DOWNLOAD / LOAD
+# LOAD
 # -------------------------
-def ensure_dirs():
-    os.makedirs(MODEL_DIR, exist_ok=True)
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    os.makedirs(ASSETS_DIR, exist_ok=True)
-
-
-def download_file(url: str, save_path: str):
-    if os.path.exists(save_path):
-        return
-
-    with st.spinner(f"Downloading {os.path.basename(save_path)} ..."):
-        urllib.request.urlretrieve(url, save_path)
-
-
-def ensure_artifacts():
-    ensure_dirs()
-    download_file(HF_MODEL_URL, MODEL_PATH)
-    download_file(HF_FEATURE_URL, FEATURE_PATH)
-    download_file(HF_METRICS_URL, METRICS_PATH)
-    download_file(HF_FI_URL, FI_PATH)
-
-
 @st.cache_resource
 def load_artifacts():
-    ensure_artifacts()
-
     model = joblib.load(MODEL_PATH)
     feature_columns = joblib.load(FEATURE_PATH)
 
@@ -424,11 +399,20 @@ def show_feature_importance(fi_df: pd.DataFrame):
 def main():
     inject_css()
 
+    required_files = [MODEL_PATH, FEATURE_PATH, METRICS_PATH, FI_PATH]
+    missing_files = [path for path in required_files if not os.path.exists(path)]
+
+    if missing_files:
+        st.error("ไม่พบไฟล์ที่จำเป็นสำหรับรันแอป")
+        st.write("Missing files:")
+        for file in missing_files:
+            st.write(f"- {file}")
+        st.stop()
+
     try:
         model, feature_columns, metrics, fi_df = load_artifacts()
     except Exception as e:
         st.error(f"โหลดโมเดลไม่สำเร็จ: {e}")
-        st.warning("เช็กว่า Hugging Face repo เป็น public และลิงก์ resolve/main ถูกต้อง")
         st.stop()
 
     render_hero()
