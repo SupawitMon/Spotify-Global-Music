@@ -1,0 +1,115 @@
+{
+    "dataset_path": "data\\track_data_final.csv",
+    "original_shape": {
+        "rows": 8778,
+        "cols": 15
+    },
+    "cleaned_shape": {
+        "rows": 8765,
+        "cols": 20
+    },
+    "target_column": "track_popularity",
+    "selected_features": [
+        "track_number",
+        "duration_min",
+        "explicit",
+        "artist_popularity",
+        "artist_followers",
+        "album_total_tracks",
+        "release_year",
+        "release_month",
+        "album_type",
+        "primary_genre",
+        "artist_followers_log"
+    ],
+    "numeric_features": [
+        "track_number",
+        "duration_min",
+        "explicit",
+        "artist_popularity",
+        "artist_followers",
+        "album_total_tracks",
+        "release_year",
+        "release_month",
+        "artist_followers_log"
+    ],
+    "categorical_features": [
+        "album_type",
+        "primary_genre"
+    ],
+    "baseline_models": [
+        {
+            "model_name": "LinearRegression",
+            "mae": 15.558370561606694,
+            "rmse": 21.132565375954567,
+            "r2": 0.2502553273909234
+        },
+        {
+            "model_name": "RandomForest",
+            "mae": 13.87679966316247,
+            "rmse": 19.940019134918668,
+            "r2": 0.3324864474670891
+        },
+        {
+            "model_name": "GradientBoosting",
+            "mae": 14.777212273887955,
+            "rmse": 20.01417923433712,
+            "r2": 0.3275120363990176
+        }
+    ],
+    "best_model": "RandomForest",
+    "best_params": {
+        "model__n_estimators": 150,
+        "model__min_samples_split": 2,
+        "model__min_samples_leaf": 1,
+        "model__max_features": "sqrt",
+        "model__max_depth": null
+    },
+    "test_mae": 14.050285514035942,
+    "test_rmse": 19.86639653660651,
+    "test_r2": 0.3374065387519144,
+    "cv_rmse_mean": 19.65256202001502,
+    "cv_rmse_std": 0.32687989732202216,
+    "top_feature_importance": [
+        {
+            "feature": "artist_popularity",
+            "importance": 0.14627851986654028
+        },
+        {
+            "feature": "artist_followers",
+            "importance": 0.13836990749630595
+        },
+        {
+            "feature": "album_type",
+            "importance": 0.1381112664596886
+        },
+        {
+            "feature": "duration_min",
+            "importance": 0.10830212499877767
+        },
+        {
+            "feature": "release_year",
+            "importance": 0.08484094555499229
+        },
+        {
+            "feature": "album_total_tracks",
+            "importance": 0.07974744424219563
+        },
+        {
+            "feature": "release_month",
+            "importance": 0.06320085079338096
+        },
+        {
+            "feature": "track_number",
+            "importance": 0.05944790415090338
+        },
+        {
+            "feature": "explicit",
+            "importance": 0.01391934320508609
+        },
+        {
+            "feature": "primary_genre",
+            "importance": 0.01135760967804981
+        }
+    ]
+}
