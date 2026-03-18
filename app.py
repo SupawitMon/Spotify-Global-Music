@@ -1,6 +1,7 @@
 import os
 import json
 import joblib
+import urllib.request
 import numpy as np
 import pandas as pd
 import streamlit as st
@@ -11,15 +12,58 @@ st.set_page_config(
     layout="wide"
 )
 
-MODEL_PATH = "models/best_model.pkl"
-FEATURE_PATH = "models/feature_columns.pkl"
-METRICS_PATH = "models/metrics.json"
-FI_PATH = "outputs/feature_importance.csv"
-LOGO_PATH = "assets/spotify_logo.png"
+# -------------------------
+# PATHS
+# -------------------------
+MODEL_DIR = "models"
+OUTPUT_DIR = "outputs"
+ASSETS_DIR = "assets"
+
+MODEL_PATH = os.path.join(MODEL_DIR, "best_model.pkl")
+FEATURE_PATH = os.path.join(MODEL_DIR, "feature_columns.pkl")
+METRICS_PATH = os.path.join(MODEL_DIR, "metrics.json")
+FI_PATH = os.path.join(OUTPUT_DIR, "feature_importance.csv")
+LOGO_PATH = os.path.join(ASSETS_DIR, "spotify_logo.png")
+
+# -------------------------
+# HUGGING FACE URLS
+# IMPORTANT: repo must be PUBLIC
+# -------------------------
+HF_MODEL_URL = "https://huggingface.co/Mon2948/spotify_model/resolve/main/best_model.pkl?download=true"
+HF_FEATURE_URL = "https://huggingface.co/Mon2948/spotify_model/resolve/main/feature_columns.pkl?download=true"
+HF_METRICS_URL = "https://huggingface.co/Mon2948/spotify_model/resolve/main/metrics.json?download=true"
+HF_FI_URL = "https://huggingface.co/Mon2948/spotify_model/resolve/main/feature_importance.csv?download=true"
+
+
+# -------------------------
+# DOWNLOAD / LOAD
+# -------------------------
+def ensure_dirs():
+    os.makedirs(MODEL_DIR, exist_ok=True)
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    os.makedirs(ASSETS_DIR, exist_ok=True)
+
+
+def download_file(url: str, save_path: str):
+    if os.path.exists(save_path):
+        return
+
+    with st.spinner(f"Downloading {os.path.basename(save_path)} ..."):
+        urllib.request.urlretrieve(url, save_path)
+
+
+def ensure_artifacts():
+    ensure_dirs()
+    download_file(HF_MODEL_URL, MODEL_PATH)
+    download_file(HF_FEATURE_URL, FEATURE_PATH)
+    download_file(HF_METRICS_URL, METRICS_PATH)
+    download_file(HF_FI_URL, FI_PATH)
 
 
 @st.cache_resource
 def load_artifacts():
+    ensure_artifacts()
+
     model = joblib.load(MODEL_PATH)
     feature_columns = joblib.load(FEATURE_PATH)
 
@@ -35,6 +79,9 @@ def load_artifacts():
     return model, feature_columns, metrics, fi
 
 
+# -------------------------
+# CSS
+# -------------------------
 def inject_css():
     st.markdown(
         """
@@ -54,7 +101,9 @@ def inject_css():
         }
 
         .hero-box {
-            background: linear-gradient(135deg, rgba(29,185,84,0.92), rgba(10,10,10,0.95));
+            background:
+                radial-gradient(circle at top left, rgba(29,185,84,0.18), transparent 28%),
+                linear-gradient(135deg, rgba(18,18,18,0.98), rgba(10,10,10,0.96));
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 28px;
             padding: 26px 28px;
@@ -74,14 +123,6 @@ def inject_css():
             color: rgba(255,255,255,0.92);
             font-size: 1rem;
             margin-top: 0.2rem;
-        }
-
-        .glass-card {
-            background: rgba(24,24,24,0.90);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 22px;
-            padding: 16px 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.20);
         }
 
         .section-title {
@@ -143,6 +184,9 @@ def inject_css():
     )
 
 
+# -------------------------
+# HELPERS
+# -------------------------
 def popularity_label(score: float) -> str:
     if score >= 85:
         return "🌟 Smash Hit"
@@ -175,42 +219,43 @@ def score_color(score: float) -> str:
     return "#ef4444"
 
 
-def render_hero(metrics):
-    left, right = st.columns([4, 1.25], vertical_alignment="center")
+# -------------------------
+# UI
+# -------------------------
+def render_hero():
+    st.markdown('<div class="hero-box">', unsafe_allow_html=True)
 
-    with left:
-        st.markdown('<div class="hero-box">', unsafe_allow_html=True)
+    logo_col, text_col = st.columns([0.8, 5], vertical_alignment="center")
 
-        logo_col, text_col = st.columns([0.8, 5], vertical_alignment="center")
-
-        with logo_col:
-            if os.path.exists(LOGO_PATH):
-                st.image(LOGO_PATH, width=62)
-            else:
-                st.markdown(
-                    '<div style="font-size:52px;line-height:1;text-align:center;">🎵</div>',
-                    unsafe_allow_html=True
-                )
-
-        with text_col:
+    with logo_col:
+        if os.path.exists(LOGO_PATH):
+            st.image(LOGO_PATH, width=62)
+        else:
             st.markdown(
-                '<div class="hero-title">Spotify Popularity Predictor</div>',
-                unsafe_allow_html=True
-            )
-            st.markdown(
-                '<div class="hero-subtitle">Predict track popularity from simple metadata with a clean Spotify-style interface.</div>',
-                unsafe_allow_html=True
-            )
-            st.markdown(
-                """
-                <span class="pill">ML Deployment</span>
-                <span class="pill">Regression</span>
-                <span class="pill">Streamlit App</span>
-                """,
+                '<div style="font-size:52px;line-height:1;text-align:center;">🎵</div>',
                 unsafe_allow_html=True
             )
 
-        st.markdown('</div>', unsafe_allow_html=True)
+    with text_col:
+        st.markdown(
+            '<div class="hero-title">Spotify Popularity Predictor</div>',
+            unsafe_allow_html=True
+        )
+        st.markdown(
+            '<div class="hero-subtitle">Predict track popularity from simple metadata with a clean Spotify-style interface.</div>',
+            unsafe_allow_html=True
+        )
+        st.markdown(
+            """
+            <span class="pill">ML Deployment</span>
+            <span class="pill">Regression</span>
+            <span class="pill">Streamlit App</span>
+            """,
+            unsafe_allow_html=True
+        )
+
+    st.markdown('</div>', unsafe_allow_html=True)
+
 
 def build_quick_inputs(feature_columns):
     st.markdown('<div class="section-title">⚡ Quick Inputs</div>', unsafe_allow_html=True)
@@ -257,7 +302,6 @@ def build_quick_inputs(feature_columns):
     }
 
     current = preset_map[preset]
-
     left, right = st.columns(2)
 
     with left:
@@ -383,16 +427,20 @@ def show_feature_importance(fi_df: pd.DataFrame):
     st.bar_chart(top_fi.set_index("feature"))
 
 
+# -------------------------
+# MAIN
+# -------------------------
 def main():
     inject_css()
 
-    if not os.path.exists(MODEL_PATH):
-        st.error("ยังไม่พบโมเดล กรุณารัน `python train.py` ก่อน")
+    try:
+        model, feature_columns, metrics, fi_df = load_artifacts()
+    except Exception as e:
+        st.error(f"โหลดโมเดลไม่สำเร็จ: {e}")
+        st.warning("เช็กว่า Hugging Face repo เป็น public และลิงก์ resolve/main ถูกต้อง")
         st.stop()
 
-    model, feature_columns, metrics, fi_df = load_artifacts()
-
-    render_hero(metrics)
+    render_hero()
 
     with st.expander("About this app", expanded=False):
         st.write(
